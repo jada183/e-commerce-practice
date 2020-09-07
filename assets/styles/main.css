@@ -1,0 +1,33 @@
+/* Styles for sidenav.**/
+nav {
+    /* background-color: aliceblue */
+}
+#content  {
+    width: 100%;
+}
+li {
+    display: inline-block;
+}
+.wrapper {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    background-color: lightblue;
+}
+.main-containter {
+    margin: 5%;
+}
+.sidebar-header {
+    background-color: #f8f9fa !important;
+    height: 60px;
+}
