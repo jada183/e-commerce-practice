@@ -1,12 +1,6 @@
-/* Styles for sidenav.**/
-nav {
-    /* background-color: aliceblue */
-}
+
 #content  {
     width: 100%;
-}
-li {
-    display: inline-block;
 }
 .wrapper {
     box-sizing: border-box;
@@ -28,6 +22,10 @@ li {
     margin: 5%;
 }
 .sidebar-header {
-    background-color: #f8f9fa !important;
+    background-color: darkblue !important;
+    color: white;
     height: 60px;
+}
+.menu-container {
+    margin: 5% 0;
 }
