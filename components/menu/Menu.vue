@@ -37,7 +37,17 @@
     </ul>
   </div>
 </template>
-
+<script>
+import { OffersQueryParams }  from "assets/const/MENU_QUERY_PARAMS"
+export default {
+    name: "sidebar-menu",
+    data() {
+        return {
+            limitedStockParamValue: OffersQueryParams.limitedStockParamValue
+        }
+    },
+}
+</script>
 <style lang='sass'>
   @import './Menu'
 </style>
