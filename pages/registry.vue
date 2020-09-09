@@ -77,6 +77,7 @@ export default {
   methods: {
     createAcount() {
       /// TODO add logic
+       this.$router.push('/')
     }
   }
 };
