@@ -1,12 +1,21 @@
 <template>
   <div class="wrapper">
     <nav id="sidebar" class="active">
-      <nav class="navbar navbar-expand-lg navbar-light sidebar-header">
-        <span>
-          <img src="~assets/icons/usuario.svg" alt="icono de usuario" width="25px" height="25px" />
-          Hola Jasondfq
-        </span>
-      </nav>
+      <NuxtLink v-bind:to="navigationLogin">
+        <nav
+          class="navbar navbar-expand-lg navbar-light sidebar-header userInfo"
+          aria-label="menu-header"
+        >
+          <span v-if="login">
+            <img src="~assets/icons/usuario.svg" alt="icono de usuario" width="25px" height="25px" />
+            Hola {{ userName }}
+          </span>
+          <span v-if="!login" class="link">
+            <img src="~assets/icons/usuario.svg" alt="icono de usuario" width="25px" height="25px" />
+            Hola, Identifícate.
+          </span>
+        </nav>
+      </NuxtLink>
       <div class="menu-container">
         <Menu />
       </div>
@@ -34,17 +43,34 @@
               </button>
             </NuxtLink>
           </div>
-          <NuxtLink to="/caddy">
-            <button class="btn">
-              <img
-                src="~assets/icons/carro-inteligente.png"
-                width="25px"
-                height="25px"
-                alt="carrito de la compra"
-              />
-              <span>Mi carrito</span>
-            </button>
-          </NuxtLink>
+          <div>
+            <NuxtLink to="/userInfo" v-if="login">
+              <button class="btn button-userInfo" >
+                <div>
+                  <div class="nameHeaderTitle">Hola {{ userName }}</div>
+                  <div>Mi cuenta</div>
+                </div>
+              </button>
+            </NuxtLink>
+           <NuxtLink to="/login" v-if="!login">
+              <button class="btn button-userInfo" >
+                <div>
+                  <div >Iniciar sesión</div>
+                </div>
+              </button>
+            </NuxtLink>
+            <NuxtLink to="/caddy">
+              <button class="btn">
+                <img
+                  src="~assets/icons/carro-inteligente.png"
+                  width="25px"
+                  height="25px"
+                  alt="carrito de la compra"
+                />
+                <span>Mi carrito</span>
+              </button>
+            </NuxtLink>
+          </div>
         </div>
       </nav>
       <main class="main-containter">
@@ -56,14 +82,36 @@
 <script>
 export default {
   name: "app",
+  data() {
+    return {
+      login: false,
+      navigationLogin: "/registry",
+      userName: "Jason"
+    };
+  },
   methods: {
     sidebarCollapse() {
-      console.log("HOLA MUNDO");
       document.getElementById("sidebar").className === "active"
         ? (document.getElementById("sidebar").className = "")
         : (document.getElementById("sidebar").className = "active");
-      //  $('#sidebar').toggleClass('active');
     }
+  },
+  created() {
+    this.navigationLogin = this.login ? "/userInfo" : "/login";
   }
 };
 </script>
+<style lang="css">
+.userInfo {
+  cursor: pointer;
+}
+.nameHeaderTitle {
+  font-size: 0.8rem;
+}
+.button-userInfo {
+  text-align: left;
+}
+.button-userInfo:hover {
+  border: 2px solid lightblue;
+}
+</style>
