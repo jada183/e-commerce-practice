@@ -13,7 +13,7 @@
         <input type="password" id="password" class="col-lg-6 form-control offset-lg-0 offset-1 col-10" />
       </div>
       <div class="row">
-        <button class="btn btn-light offset-2 col-8">Iniciar sesión</button>
+        <button class="btn btn-light offset-2 col-8" v-on:click="login()">Iniciar sesión</button>
       </div>
       <hr class="registry-separator" />
       <div class="row">
@@ -29,6 +29,15 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  methods: {
+    login() {
+      this.$router.push('/');
+    }
+  }
+}
+</script>
 <style>
 .login-box {
   border: 1px #ddd solid;
