@@ -37,3 +37,7 @@ input {
 .error-text {
     color: red;
 }
+/**  page title **/
+.page-info-title {
+  text-align: center;
+}

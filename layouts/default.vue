@@ -3,11 +3,12 @@
     <nav id="sidebar" class="active">
       <NuxtLink v-bind:to="navigationLogin">
         <nav
-          class="navbar navbar-expand-lg navbar-light sidebar-header userInfo" aria-label="menu-header"
+          class="navbar navbar-expand-lg navbar-light sidebar-header userInfo"
+          aria-label="menu-header"
         >
           <span v-if="login">
             <img src="~assets/icons/usuario.svg" alt="icono de usuario" width="25px" height="25px" />
-            Hola Jasondfq
+            Hola {{ userName }}
           </span>
           <span v-if="!login" class="link">
             <img src="~assets/icons/usuario.svg" alt="icono de usuario" width="25px" height="25px" />
@@ -42,17 +43,34 @@
               </button>
             </NuxtLink>
           </div>
-          <NuxtLink to="/caddy">
-            <button class="btn">
-              <img
-                src="~assets/icons/carro-inteligente.png"
-                width="25px"
-                height="25px"
-                alt="carrito de la compra"
-              />
-              <span>Mi carrito</span>
-            </button>
-          </NuxtLink>
+          <div>
+            <NuxtLink to="/userInfo" v-if="login">
+              <button class="btn button-userInfo" >
+                <div>
+                  <div class="nameHeaderTitle">Hola {{ userName }}</div>
+                  <div>Mi cuenta</div>
+                </div>
+              </button>
+            </NuxtLink>
+           <NuxtLink to="/login" v-if="!login">
+              <button class="btn button-userInfo" >
+                <div>
+                  <div >Iniciar sesión</div>
+                </div>
+              </button>
+            </NuxtLink>
+            <NuxtLink to="/caddy">
+              <button class="btn">
+                <img
+                  src="~assets/icons/carro-inteligente.png"
+                  width="25px"
+                  height="25px"
+                  alt="carrito de la compra"
+                />
+                <span>Mi carrito</span>
+              </button>
+            </NuxtLink>
+          </div>
         </div>
       </nav>
       <main class="main-containter">
@@ -67,7 +85,8 @@ export default {
   data() {
     return {
       login: false,
-      navigationLogin: "/registry"
+      navigationLogin: "/registry",
+      userName: "Jason"
     };
   },
   methods: {
@@ -86,7 +105,13 @@ export default {
 .userInfo {
   cursor: pointer;
 }
-.userInfo:active {
-  background-color: yellow;
+.nameHeaderTitle {
+  font-size: 0.8rem;
+}
+.button-userInfo {
+  text-align: left;
+}
+.button-userInfo:hover {
+  border: 2px solid lightblue;
 }
 </style>

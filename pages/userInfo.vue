@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row justify-content-center">
-      <h3 class="col-md-4 user-info-title">Datos de usuario</h3>
+      <h3 class="col-md-4 page-info-title">Datos de usuario</h3>
     </div>
     <div class="form-container col-12  offset-lg-2 col-lg-8 ">
       <div class="row">
@@ -10,7 +10,7 @@
           type="text"
           placeholder="nombre..."
           id="name"
-          class="col-md-5"
+          class="col-md-5 form-control"
           v-model="name"
           v-bind:disabled="disabledName"
         />
@@ -31,7 +31,7 @@
           type="text"
           placeholder="Email..."
           id="email"
-          class="col-md-5"
+          class="col-md-5 form-control"
           v-model="email"
           v-bind:disabled="disabledEmail"
         />
@@ -52,7 +52,7 @@
           type="text"
           placeholder="Teléfono..."
           id="phone"
-          class="col-md-5"
+          class="col-md-5 form-control"
           v-model="phone"
           v-bind:disabled="disabledPhone"
         />
@@ -73,7 +73,7 @@
           type="password"
           placeholder="contraseña...."
           id="password"
-          class="col-md-5"
+          class="col-md-5 form-control"
           v-model="password"
           v-bind:disabled="true"
         />
@@ -88,7 +88,7 @@
           type="password"
           placeholder="contraseña...."
           id="newPassword"
-          class="col-md-5"
+          class="col-md-5 form-control"
           v-model="newPassword"
         />
         <button class="btn btn-light offset-1 col-md-2" v-on:click="cancelChangePassword()" tabindex="-1">Cancelar</button>
@@ -99,7 +99,7 @@
           type="password"
           placeholder="contraseña...."
           id="repeatedNewPassword"
-          class="col-md-5"
+          class="col-md-5 form-control"
           v-model="repeatedNewPassword"
         />
         <button class="btn btn-light offset-1 col-md-2" v-on:click="changePasswordEvent()">Guardar</button>
@@ -156,7 +156,7 @@ export default {
 };
 </script>
 <style lang="css">
-.user-info-title {
+.page-info-title {
   text-align: center;
 }
 .form-container {
@@ -176,6 +176,6 @@ input:disabled {
   background-color: white !important;
 }
 button {
-    /* height: 40px; */
+    height: 40px;
 }
 </style>
