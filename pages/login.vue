@@ -3,17 +3,17 @@
     <div class="row justify-content-center">
       <h3 class="col-md-4 page-info-title">Iniciar sesion</h3>
     </div>
-    <div class="login-box col-12 offset-lg-3 col-lg-6">
+    <div class="login-box col-12 offset-xl-3 col-xl-6 offset-lg-2 col-lg-8">
       <div class="row">
-        <label for="username" class="col-lg-3 offset-lg-1">Usuario:</label>
-        <input type="text" id="username" class="col-lg-6 form-control" />
+        <label for="username" class="col-lg-3 offset-lg-1  offset-1 col-12">Usuario:</label>
+        <input type="text" id="username" class="col-lg-6 form-control offset-lg-0 offset-1 col-10" />
       </div>
       <div class="row">
-        <label for="password" class="col-lg-3 offset-lg-1">Contraseña:</label>
-        <input type="password" id="password" class="col-lg-6 form-control" />
+        <label for="password" class="col-lg-3 offset-lg-1 offset-1 col-12">Contraseña:</label>
+        <input type="password" id="password" class="col-lg-6 form-control offset-lg-0 offset-1 col-10" />
       </div>
       <div class="row">
-        <button class="btn btn-light col offset-lg-7 col-lg-3">Iniciar sesión</button>
+        <button class="btn btn-light offset-2 col-8">Iniciar sesión</button>
       </div>
       <hr class="registry-separator" />
       <div class="row">

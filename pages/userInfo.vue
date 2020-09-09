@@ -176,6 +176,6 @@ input:disabled {
   background-color: white !important;
 }
 button {
-    height: 40px;
+    height: auto;
 }
 </style>
