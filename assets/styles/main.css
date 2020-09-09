@@ -30,3 +30,10 @@
 .menu-container {
     margin: 5% 0;
 }
+/**  INPUTS **/
+input {
+    height: 40px;
+}
+.error-text {
+    color: red;
+}
