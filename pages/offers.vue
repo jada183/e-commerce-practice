@@ -14,11 +14,9 @@ export default {
   methods: {
     showQueryParam() {
       this.type = this.$route.query.type;
-      console.log(this.type);
     }
   },
   created() {
-    console.log(this.type);
   },
   watch: {
     '$route': 'showQueryParam'

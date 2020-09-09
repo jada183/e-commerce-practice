@@ -1,12 +1,20 @@
 <template>
   <div class="wrapper">
     <nav id="sidebar" class="active">
-      <nav class="navbar navbar-expand-lg navbar-light sidebar-header">
-        <span>
-          <img src="~assets/icons/usuario.svg" alt="icono de usuario" width="25px" height="25px" />
-          Hola Jasondfq
-        </span>
-      </nav>
+      <NuxtLink v-bind:to="navigationLogin">
+        <nav
+          class="navbar navbar-expand-lg navbar-light sidebar-header userInfo" aria-label="menu-header"
+        >
+          <span v-if="login">
+            <img src="~assets/icons/usuario.svg" alt="icono de usuario" width="25px" height="25px" />
+            Hola Jasondfq
+          </span>
+          <span v-if="!login" class="link">
+            <img src="~assets/icons/usuario.svg" alt="icono de usuario" width="25px" height="25px" />
+            Hola, Identifícate.
+          </span>
+        </nav>
+      </NuxtLink>
       <div class="menu-container">
         <Menu />
       </div>
@@ -56,14 +64,29 @@
 <script>
 export default {
   name: "app",
+  data() {
+    return {
+      login: false,
+      navigationLogin: "/registry"
+    };
+  },
   methods: {
     sidebarCollapse() {
-      console.log("HOLA MUNDO");
       document.getElementById("sidebar").className === "active"
         ? (document.getElementById("sidebar").className = "")
         : (document.getElementById("sidebar").className = "active");
-      //  $('#sidebar').toggleClass('active');
     }
+  },
+  created() {
+    this.navigationLogin = this.login ? "/userInfo" : "/login";
   }
 };
 </script>
+<style lang="css">
+.userInfo {
+  cursor: pointer;
+}
+.userInfo:active {
+  background-color: yellow;
+}
+</style>
