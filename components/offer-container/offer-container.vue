@@ -23,7 +23,7 @@
      <div class="row" v-if="weekOffer">
         <span class="col-12 alert-text">Oferta solo esta semana</span>
     </div>
-    <div v-else-if="timeLimitDate">
+    <div class="row" v-else-if="timeLimitDate">
         <span class="col-12 alert-text">Fecha limite: {{ timeLimitDate }}</span>
     </div>
   </div>
