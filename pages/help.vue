@@ -1,5 +1,5 @@
 <template>
     <div class="container">
-        <h5>Favoritos</h5>
+        <h3>Ayuda</h3>
     </div>
 </template>
