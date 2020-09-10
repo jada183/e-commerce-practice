@@ -45,17 +45,17 @@
           </div>
           <div>
             <NuxtLink to="/userInfo" v-if="login">
-              <button class="btn button-userInfo" >
+              <button class="btn button-userInfo">
                 <div>
                   <div class="nameHeaderTitle">Hola {{ userName }}</div>
                   <div>Mi cuenta</div>
                 </div>
               </button>
             </NuxtLink>
-           <NuxtLink to="/login" v-if="!login">
-              <button class="btn button-userInfo" >
+            <NuxtLink to="/login" v-if="!login">
+              <button class="btn button-userInfo">
                 <div>
-                  <div >Iniciar sesión</div>
+                  <div>Iniciar sesión</div>
                 </div>
               </button>
             </NuxtLink>
@@ -73,26 +73,29 @@
           </div>
         </div>
       </nav>
-      <main class="main-containter">
-        <Nuxt />
+      <main class="main-containter">        
+          <Nuxt />
       </main>
-     <!-- Footer -->
-<footer class="page-footer font-small blue pt-4">
-
-  <!-- Footer Links -->
-  <div class="container-fluid text-center text-md-left">
-
-  </div>
-  <!-- Footer Links -->
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
+      <!-- Footer -->
+      <footer class="page-footer font-small blue pt-2 pb-2 bg-light">
+        <div class="py-3 container-fluid">
+          <div>
+            <span>Contacto a jason.francoquintero@plexus.es</span>
+            <!-- <span>Tel: 60739143</span> -->
+          </div>
+          <NuxtLink to="/help">
+            <button type="button" class="btn">
+              <img
+                src="~assets/icons/pregunta.svg"
+                width="25px"
+                height="25px"
+                alt="icono de interrogante para ayuda"
+              />
+            </button>
+          </NuxtLink>
+        </div>
+      </footer>
+      <!-- Footer -->
     </div>
   </div>
 </template>
@@ -130,5 +133,25 @@ export default {
 }
 .button-userInfo:hover {
   border: 2px solid lightblue;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+footer {
+  border: 1px #ddd solid;
+  color: black;
+  align-items: center;
+}
+footer .container-fluid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+main {
+  flex: 1 0 auto;
 }
 </style>
