@@ -144,6 +144,7 @@ footer {
   border: 1px #ddd solid;
   color: black;
   align-items: center;
+
 }
 footer .container-fluid {
   display: flex;
