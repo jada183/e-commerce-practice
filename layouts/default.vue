@@ -77,7 +77,7 @@
           <Nuxt />
       </main>
       <!-- Footer -->
-      <footer class="page-footer font-small blue pt-2 pb-2 bg-light">
+      <footer class=" page-footer font-small blue pt-2 pb-2 bg-light">
         <div class="py-3 container-fluid">
           <div>
             <span>Contacto a jason.francoquintero@plexus.es</span>
@@ -137,14 +137,13 @@ export default {
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
 }
 
 footer {
   border: 1px #ddd solid;
   color: black;
   align-items: center;
-
+  align-self: flex-end;  
 }
 footer .container-fluid {
   display: flex;
