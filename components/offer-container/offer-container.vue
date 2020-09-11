@@ -5,9 +5,9 @@
       <img
         v-bind:src="image"
         width="100%"
-        height="220px"
+        height="160px"
         alt="imagen producto"
-        class="position-relative"
+        class="position-relative imgOffer"
       />
     </div>
     <div class="row mt-10">
@@ -53,7 +53,7 @@ export default {
       required: false
     },
     timeLimitDate: {
-      type: Date,
+      type: String,
       required: false
     },
     weekOffer: {
@@ -80,7 +80,7 @@ export default {
   color: white;
 }
 .row {
-  margin:5%;
+  margin:2.5%;
 }
 .price-value {
     color: red;
