@@ -140,6 +140,7 @@ export default {
 }
 
 footer {
+  width: 100%;
   border: 1px #ddd solid;
   color: black;
   align-items: center;
