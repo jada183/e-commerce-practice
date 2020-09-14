@@ -25,6 +25,7 @@
                             En la ventana del detalle producto dispondras una caja de texto donde podras introducir la cantidad de un producto que deseas y ademas un boton azul 
                             que te permitira añadir el producto al carrito.
                         </li>
+                        <li>Cuando el producto no existe en stock se le dara la posibilidad de recibir una notificacion via correo electrónico</li>
                     </ul>
                 </li>
                 <li>
