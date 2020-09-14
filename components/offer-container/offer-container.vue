@@ -1,7 +1,7 @@
 <template>
   <div class="border-box">
     <div>
-      <div class="discount-container">{{discount}}%</div>
+      <div class="discount-container" v-if="discount">{{discount}}%</div>
       <img
         v-bind:src="image"
         width="100%"
@@ -15,8 +15,9 @@
     </div>
     <div class="row">
         <span class="col-xl-3 col-5">Precio:</span>
-        <span class="price-value col-xl-2 col-6">{{price}}€</span>
+        <span class="col-xl-2 col-6" :class="discount ?  'price-value' : ''">{{price}}€</span>
     </div>
+    
     <div class="row" v-if="stockLimit">
         <span class="col-12 alert-text">Quedan {{stockLimit}} unidades</span>
     </div>
