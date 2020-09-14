@@ -1,13 +1,13 @@
 <template>
   <div class="border-box">
     <div>
-      <div class="discount-container">{{discount}}%</div>
+      <div class="discount-container" v-if="discount">{{discount}}%</div>
       <img
         v-bind:src="image"
         width="100%"
-        height="220px"
+        height="160px"
         alt="imagen producto"
-        class="position-relative"
+        class="position-relative imgOffer"
       />
     </div>
     <div class="row mt-10">
@@ -15,8 +15,9 @@
     </div>
     <div class="row">
         <span class="col-xl-3 col-5">Precio:</span>
-        <span class="price-value col-xl-2 col-6">{{price}}€</span>
+        <span class="col-xl-2 col-6" :class="discount ?  'price-value' : ''">{{price}}€</span>
     </div>
+    
     <div class="row" v-if="stockLimit">
         <span class="col-12 alert-text">Quedan {{stockLimit}} unidades</span>
     </div>
@@ -53,7 +54,7 @@ export default {
       required: false
     },
     timeLimitDate: {
-      type: Date,
+      type: String,
       required: false
     },
     weekOffer: {
@@ -80,7 +81,7 @@ export default {
   color: white;
 }
 .row {
-  margin:5%;
+  margin:2.5%;
 }
 .price-value {
     color: red;

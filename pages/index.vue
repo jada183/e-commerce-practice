@@ -94,7 +94,7 @@ export default {
         {
           name: "portatil prueba 2",
           price: 998,
-          image: "_nuxt/assets/img/laptops.png",
+          image: "_nuxt/assets/img/laptop.png",
           discount: 20,
           stockLimit: null,
           timeLimitDate: null,
@@ -114,7 +114,7 @@ export default {
         {
           name: "portatil prueba 4",
           price: 898,
-          image: "_nuxt/assets/img/laptops.png",
+          image: "_nuxt/assets/img/laptop.png",
           discount: 20,
           stockLimit: null,
           timeLimitDate: null,
