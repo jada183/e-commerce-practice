@@ -15,7 +15,7 @@
               width="auto"
               height="220px"
               alt="Portatiles"
-              class="col-12"
+              class="col-12 reponsive-category"
             />
           </div>
         </NuxtLink>
@@ -32,7 +32,7 @@
               width="auto"
               height="220px"
               alt="Móviles"
-              class="col-12"
+              class="col-12 reponsive-category"
             />
           </div>
         </NuxtLink>
@@ -49,7 +49,7 @@
               width="auto"
               height="220px"
               alt="Móviles"
-              class="col-12"
+              class="col-12 reponsive-category"
             />
           </div>
         </NuxtLink>

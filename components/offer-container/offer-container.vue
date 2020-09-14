@@ -7,7 +7,7 @@
         width="100%"
         height="160px"
         alt="imagen producto"
-        class="position-relative imgOffer"
+        class="position-relative responsive-offer"
       />
     </div>
     <div class="row mt-10">

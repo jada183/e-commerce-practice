@@ -44,3 +44,7 @@ input {
 .page-info-title {
   text-align: center;
 }
+@media screen and ( max-width: 1024px ) {
+img.responsive-offer { height:100px; }
+img.reponsive-category { height: 180px ;}
+}
