@@ -36,6 +36,10 @@
 .text-aling-center {
     text-align: center;
 }
+a {
+    text-decoration: none !important;
+    color: black!important;
+}
 /**  INPUTS **/
 input {
     height: 45px;

@@ -24,17 +24,65 @@
           </div>
         </div>
         <div class="row mt-5">
-            <b class="col-2">Marca:</b>
-            <span class="offset-2 col-4">{{ brand}}</span>
+          <b class="col-2">Marca:</b>
+          <span class="offset-2 col-4">{{ brand}}</span>
         </div>
-         <div class="row  mt-3">
-            <b class="col-2">Envio:</b>
-            <span class="offset-2 col-4">Desde: {{  shippingConst }} €</span>
+        <div class="row mt-3">
+          <b class="col-2">Envio:</b>
+          <span class="offset-2 col-4">Desde: {{ shippingConst }} €</span>
         </div>
-        <div class="row">
-            
+        <div class="row mt-3">
+          <b class="col-2">Cantidad:</b>
+          <quantity class="offset-2 col-4" v-bind:quantity="quantity" />
+        </div>
+        <div class="row mt-3">
+          <b class="col-2">Disponibilidad</b>
+          <span class="offset-2 col-6 stockOk" v-if="stock">En stock</span>
+          <span class="offset-2 col-6 stockNoOk" v-if="!stock">No disponible</span>
+        </div>
+        <div class="row mt-5">
+          <div class="col-2">
+            <button class="favoriteButton" v-on:click="changeFavoriteOption()">
+              <img
+                src="~assets/icons/corazon-rojo.svg"
+                width="80%"
+                height="80%"
+                alt="Corazón rojo"
+                v-if="favorite"
+              />
+              <img
+                src="~assets/icons/corazon-gris.svg"
+                width="80%"
+                height="80%"
+                alt="Corazón gris"
+                v-if="favorite === false"
+              />
+            </button>
+          </div>
+          <button class="btn btn-primary col-4 offset-1">
+            <img
+              src="~assets/icons/carro-inteligente.png"
+              width="25px"
+              height="25px"
+              class="color-white"
+              alt="carrito de la compra"
+            />
+            <span class="pl-3">Añadir a carrito</span>
+          </button>
         </div>
       </div>
+    </div>
+    <div class="row feature-box-margin">
+        <hr class="col-12" />
+    </div>
+    <div class="row ">
+      <div>
+        <h5 class="col-3">Características</h5>
+      </div>
+    </div>
+    <div class="row">
+        <div v-html="features" class="col-12 ">
+        </div>
     </div>
   </div>
 </template>
@@ -47,9 +95,18 @@ export default {
       image: "_nuxt/assets/img/sobremesa.png",
       price: "598",
       discount: 20,
-      brand: 'HP Electronics',
-      shippingConst: "5.25"
+      brand: "HP Electronics",
+      shippingConst: "5.25",
+      quantity: 1,
+      stock: true,
+      favorite: false,
+      features: "<p><ul><li>Productividad y seguridad mejoradas</li> <li>Fiabilidad extrema</li> <li>Asistencia organizativa</li></ul></p>"
     };
+  },
+  methods: {
+    changeFavoriteOption() {
+      this.favorite = !this.favorite;
+    }
   }
 };
 </script>
@@ -66,5 +123,21 @@ export default {
   border-radius: 4px;
   background-color: red;
   color: white;
+}
+.stockOk {
+  border-radius: 4px;
+  background-color: lightgreen;
+  color: darkgreen;
+}
+.stockNoOk {
+  border-radius: 4px;
+  background-color: red;
+  color: white;
+}
+.favoriteButton {
+  padding: 5%;
+}
+.feature-box-margin {
+  margin-top: 15%;
 }
 </style>
