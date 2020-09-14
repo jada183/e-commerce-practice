@@ -60,7 +60,7 @@
     </div>
     <div class="row mb-2">
       <div class="col-3" v-for="offer in offerList">
-        <NuxtLink v-bind:to="'/product-detail?' + offer.id">
+        <NuxtLink v-bind:to="'/product-detail?id=' + offer.id">
         <offer-container
           v-bind:name="offer.name"
           v-bind:image="offer.image"

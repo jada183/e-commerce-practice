@@ -33,6 +33,13 @@
 .menu-container {
     margin: 5% 0;
 }
+.text-aling-center {
+    text-align: center;
+}
+a {
+    text-decoration: none !important;
+    color: black!important;
+}
 /**  INPUTS **/
 input {
     height: 45px;
@@ -44,7 +51,10 @@ input {
 .page-info-title {
   text-align: center;
 }
+
+/** IMAGES **/
 @media screen and ( max-width: 1024px ) {
 img.responsive-offer { height:100px; }
 img.reponsive-category { height: 180px ;}
+img.responsive-product-detail { height: 320px;}
 }
