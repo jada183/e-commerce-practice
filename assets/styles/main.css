@@ -41,6 +41,9 @@ a {
     text-decoration: none !important;
     color: black!important;
 }
+.alig-right {
+    text-align: right;
+}
 /**  INPUTS **/
 input {
     height: 45px;
@@ -58,4 +61,5 @@ input {
 img.responsive-offer { height:100px; }
 img.reponsive-category { height: 180px ;}
 img.responsive-product-detail { height: 320px;}
+img.caddy-item-image { height: 80%;}
 }

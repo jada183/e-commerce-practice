@@ -64,7 +64,6 @@
               src="~assets/icons/carro-inteligente.png"
               width="25px"
               height="25px"
-              class="color-white"
               alt="carrito de la compra"
             />
             <span class="pl-3">Añadir a carrito</span>
