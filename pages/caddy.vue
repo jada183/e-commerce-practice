@@ -4,7 +4,7 @@
       <h3>Artículos de tu cesta</h3>
     </div>
     <div class="row">
-      <div class="col-lg-8 col-12">
+      <div class="col-lg-9 col-12">
         <div class="table-container">
           <div class="row table-header bg-light">
             <span class="col-5">ARTÍCULO</span>
@@ -52,14 +52,14 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-12">
+      <div class="col-lg-3 col-12">
         <div class="row">
           <h5 class="col-lg-4 offset-lg-1 offset-1 col-4">TOTAL:</h5>
-          <h5 class="col-lg-4 offset-2 col-4 alig-right">{{total}}€</h5>
+          <h5 class="col-lg-4 offset-3 col-4 alig-right">{{total}}€</h5>
         </div>
         <div class="row mt-3 mb-5">
           <div class="col-12">
-            <button class="btn btn-primary col-10 offset-1">Realizar pedido</button>
+            <button class="btn btn-primary col-11 offset-1">Realizar pedido</button>
           </div>
         </div>
       </div>
