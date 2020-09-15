@@ -7,13 +7,13 @@
       <div class="col-lg-8 col-12">
         <div class="table-container">
           <div class="row table-header bg-light">
-            <span class="col-6">ARTÍCULO</span>
+            <span class="col-5">ARTÍCULO</span>
             <span class="col-2">PRECIO</span>
             <span class="col-2">UNIDADES</span>
             <span class="col-2 last-column">TOTAL</span>
           </div>
           <div class="row mb-3 content-row" v-for="item in itemList">
-            <div class="col-6 item-title-img-link">
+            <div class="col-5 item-title-img-link">
               <NuxtLink
                 v-bind:to="'/product-detail?id=' + item.id"
                 class="item-title-img-container"
@@ -35,6 +35,7 @@
               <quantity v-bind:quantity="item.quantity" />
             </span>
             <span class="col-2 last-column">{{ item.price *item.quantity}}€</span>
+            <span class="col-1 remove-item">x</span>
           </div>
         </div>
         <div class="row mb-5">
@@ -120,5 +121,12 @@ export default {
 .table-container {
   border-bottom: 1px solid #ddd;
   margin-bottom: 5%;
+}
+.remove-item {
+  cursor: pointer;
+  
+}
+.remove-item:hover {
+  text-decoration: underline;
 }
 </style>
