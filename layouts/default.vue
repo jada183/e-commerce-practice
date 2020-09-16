@@ -30,6 +30,7 @@
                 width="25px"
                 height="25px"
                 alt="menu de hamburguesa"
+                class="menu-logo"
               />
             </button>
             <NuxtLink to="/">
@@ -39,6 +40,7 @@
                   width="auto"
                   height="30px"
                   alt="logo de la tienda"
+                  class="company-logo"
                 />
               </button>
             </NuxtLink>
@@ -66,6 +68,7 @@
                   width="25px"
                   height="25px"
                   alt="carrito de la compra"
+                  class="caddy-button"
                 />
                 <span>Mi carrito</span>
               </button>
@@ -90,6 +93,7 @@
                 width="25px"
                 height="25px"
                 alt="icono de interrogante para ayuda"
+                class="footer-help-button"
               />
             </button>
           </NuxtLink>
@@ -154,5 +158,13 @@ footer .container-fluid {
 }
 main {
   flex: 1 0 auto;
+}
+@media screen and (max-width: 991px ) {
+  button {
+    font-size: 2.0em!important;
+  }
+  footer {
+    font-size: 1.7em!important;
+  }
 }
 </style>

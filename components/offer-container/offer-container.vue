@@ -92,7 +92,7 @@ export default {
 }
 @media screen and ( max-width: 991px ) { 
   * {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 }
 </style>

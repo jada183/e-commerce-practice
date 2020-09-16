@@ -167,4 +167,11 @@ export default {
   offer-container {
     margin-top: 5%;
   }
+   input  {
+    height: 60px;
+    font-size: 2.0em;
+  }
+  button {
+    font-size: 2.0em;
+  }
 </style>

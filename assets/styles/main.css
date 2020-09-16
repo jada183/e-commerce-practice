@@ -62,4 +62,19 @@ img.responsive-offer { height:160px; }
 img.reponsive-category { height: 260px ;}
 img.responsive-product-detail { height: 320px;}
 img.caddy-item-image { height: 80%;}
+img.caddy-button {
+    height: 35px;
+    width: 35px;
+}
+.company-logo {
+    height: 50px;
+}
+.menu-logo {
+    width: 50px;
+    height: 50px;
+}
+.footer-help-button {
+    height: 50px;
+    width: 50px;
+}
 }
