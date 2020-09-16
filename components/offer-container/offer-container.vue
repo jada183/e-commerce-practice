@@ -14,7 +14,7 @@
       <span class="col-12">{{ name }}</span>
     </div>
     <div class="row">
-        <span class="col-xl-3 col-3">Precio:</span>
+        <span class="col-xl-5 col-5">Precio:</span>
         <span class="col-xl-2 col-2" :class="discount ?  'price-value' : ''">{{price}}€</span>
     </div>
     
@@ -89,5 +89,10 @@ export default {
 }
 .alert-text {
     color: red;
+}
+@media screen and ( max-width: 991px ) { 
+  * {
+    font-size: 1.3em;
+  }
 }
 </style>

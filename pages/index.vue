@@ -4,10 +4,10 @@
       <h3>Productos</h3>
     </div>
     <div class="row mb-4">
-      <div class="col-4 border-box">
+      <div class="col-lg-4 col-12 border-box">
         <NuxtLink to="/products?type=laptop">
           <div class="row">
-            <h3 class="offset-xl-4 col-xl-4 col-12align-center">Portátiles</h3>
+            <h3 class="offset-xl-4 col-xl-4 col-12 align-center">Portátiles</h3>
           </div>
           <div class="row">
             <img
@@ -21,7 +21,7 @@
         </NuxtLink>
       </div>
 
-      <div class="col-4 border-box">
+      <div class="col-lg-4 col-12 border-box">
         <NuxtLink to="/products?type=mobile">
           <div class="row">
             <h3 class="offset-xl-4 col-xl-4 col-12 align-center">Móviles</h3>
@@ -38,7 +38,7 @@
         </NuxtLink>
       </div>
 
-      <div class="col-4 border-box">
+      <div class="col-lg-4 col-12 border-box">
         <NuxtLink to="/products?type=desk">
           <div class="row">
             <h3 class="offset-xl-4 col-xl-4 col-12 align-center">Sobremesas</h3>

@@ -25,7 +25,7 @@
       <button class="btn btn-light">Buscar</button>
     </div>
     <div class="row mb-2">
-      <div class="col-3" v-for="offer in offerList">
+      <div class="col-lg-3 col-6" v-for="offer in offerList">
         <NuxtLink v-bind:to="'/product-detail?id=' + offer.id">
           <offer-container
             class="mt-3"

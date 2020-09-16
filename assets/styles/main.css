@@ -57,9 +57,9 @@ input {
 }
 
 /** IMAGES **/
-@media screen and ( max-width: 1024px ) {
+@media screen and ( max-width: 992px ) {
 img.responsive-offer { height:160px; }
-img.reponsive-category { height: 180px ;}
+img.reponsive-category { height: 260px ;}
 img.responsive-product-detail { height: 320px;}
 img.caddy-item-image { height: 80%;}
 }
