@@ -26,3 +26,11 @@ a {
     text-decoration: none !important;
     color: black!important;
 }
+@media screen and ( max-width: 991px ) { 
+    li {
+        font-size: 1.5em;
+    }
+    h5 {
+        font-size:1.8em;
+    }
+}

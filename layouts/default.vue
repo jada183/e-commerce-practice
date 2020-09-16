@@ -47,7 +47,7 @@
           </div>
           <div>
             <NuxtLink to="/userInfo" v-if="login">
-              <button class="btn button-userInfo">
+              <button class="btn button-userInfo header-button">
                 <div>
                   <div class="nameHeaderTitle">Hola {{ userName }}</div>
                   <div>Mi cuenta</div>
@@ -55,14 +55,14 @@
               </button>
             </NuxtLink>
             <NuxtLink to="/login" v-if="!login">
-              <button class="btn button-userInfo">
+              <button class="btn button-userInfo header-button">
                 <div>
                   <div>Iniciar sesión</div>
                 </div>
               </button>
             </NuxtLink>
             <NuxtLink to="/caddy">
-              <button class="btn">
+              <button class="btn header-button">
                 <img
                   src="~assets/icons/carro-inteligente.png"
                   width="25px"
@@ -160,11 +160,14 @@ main {
   flex: 1 0 auto;
 }
 @media screen and (max-width: 991px ) {
-  button {
+  .header-button {
     font-size: 2.0em!important;
   }
   footer {
     font-size: 1.7em!important;
+  }
+  .userInfo {
+    font-size: 1.5em;
   }
 }
 </style>
