@@ -4,7 +4,7 @@
       <h3 class="col-md-4 page-info-title">Productos</h3>
     </div>
     <div class="row mb-5">
-      <div class="offset-xl-2 col-xl-8">
+      <div class="offset-xl-2 col-xl-8 col-8 offset-1">
         <!-- <div class="dropdown">
           <button
             class="btn btn-secondary dropdown-toggle"
