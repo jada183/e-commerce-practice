@@ -59,7 +59,7 @@
       <h3>Ofertas destacadas</h3>
     </div>
     <div class="row mb-2">
-      <div class="col-3" v-for="offer in offerList">
+      <div class="col-lg-3 col-6" v-for="offer in offerList">
         <NuxtLink v-bind:to="'/product-detail?id=' + offer.id">
         <offer-container
           v-bind:name="offer.name"
