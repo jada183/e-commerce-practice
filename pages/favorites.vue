@@ -122,6 +122,7 @@ export default {
 }
 .remove-item {
   cursor: pointer;
+   color: red;
 }
 .remove-item:hover {
   text-decoration: underline;

@@ -52,3 +52,14 @@ export default {
   }
 };
 </script>
+<style scoped>
+@media screen and ( max-width: 992px ) {
+  button {
+    font-size: 1.5em!important;
+  }
+  input{
+    height: auto!important;
+    font-size: 1.5em!important;
+  }
+}
+</style>

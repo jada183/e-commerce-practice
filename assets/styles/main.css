@@ -94,6 +94,6 @@ img.caddy-button {
     font-size: 1em !important;
   }
   .no-show-mobile {
-      display: none;
+      display: none!important;
   }
 }
