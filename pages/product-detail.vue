@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-lg-6 col-sm-12">
+      <div class="col-lg-6 col-12">
         <img
           v-bind:src="image"
           width="100%"
@@ -10,7 +10,7 @@
           class="position-relative responsive-product-detail"
         />
       </div>
-      <div class="col-lg-6 col-sm-12">
+      <div class="col-lg-6 col-12">
         <div class="row">
           <h5 class="col-12">{{name}}</h5>
         </div>
@@ -24,21 +24,21 @@
           </div>
         </div>
         <div class="row mt-5">
-          <b class="col-2">Marca:</b>
-          <span class="offset-2 col-4">{{ brand}}</span>
+          <b class="col-lg-2 col-6">Marca:</b>
+          <span class="offset-lg-2 offset-0 col-6">{{ brand}}</span>
         </div>
         <div class="row mt-3">
-          <b class="col-2">Envio:</b>
-          <span class="offset-2 col-4">Desde: {{ shippingConst }} €</span>
+          <b class="col-lg-2 col-6">Envio:</b>
+          <span class="offset-lg-2 col-6">Desde: {{ shippingConst }} €</span>
         </div>
         <div class="row mt-3">
-          <b class="col-2">Cantidad:</b>
-          <quantity class="offset-2 col-4" v-bind:quantity="quantity" />
+          <b class="col-lg-2 col-6">Cantidad:</b>
+          <quantity class="offset-lg-2 col-6 offset-0" v-bind:quantity="quantity" />
         </div>
         <div class="row mt-3">
-          <b class="col-2">Disponibilidad</b>
-          <span class="offset-2 col-6 stockOk" v-if="stock">En stock</span>
-          <span class="offset-2 col-6 stockNoOk" v-if="!stock">No disponible</span>
+          <b class="col-lg-2 col-6">Disponibilidad</b>
+          <span class="offset-lg-2 offset-0 col-6 stockOk" v-if="stock">En stock</span>
+          <span class="offset-lg-2 offset-0 col-6 stockNoOk" v-if="!stock">No disponible</span>
         </div>
         <div class="row mt-5">
           <div class="col-2">
@@ -59,14 +59,15 @@
               />
             </button>
           </div>
-          <button class="btn btn-primary col-4 offset-1">
+          <button class="btn btn-primary col-6 offset-1">
             <img
               src="~assets/icons/carro-inteligente.png"
               width="25px"
               height="25px"
               alt="carrito de la compra"
+              class="caddy-button"
             />
-            <span class="pl-3">Añadir a carrito</span>
+            <span class="pl-3 font-size-fix">Añadir a carrito</span>
           </button>
         </div>
       </div>
@@ -80,7 +81,7 @@
       </div>
     </div>
     <div class="row">
-        <div v-html="features" class="col-12 ">
+        <div v-html="features" class="col-12 features">
         </div>
     </div>
   </div>
@@ -139,4 +140,19 @@ export default {
 .feature-box-margin {
   margin-top: 15%;
 }
+@media screen and ( max-width: 992px ) {
+  .discount {
+    font-size: 2.0em;
+  }
+  span {
+    font-size: 2em;
+  }
+  .font-size-fix {
+    font-size: 1em!important;
+  }
+  .features {
+    font-size: 2em;
+  }
+}
+
 </style>

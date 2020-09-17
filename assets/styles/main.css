@@ -81,10 +81,13 @@ img.caddy-button {
     height: 60px!important;
     font-size: 2.0em!important;
   }
+  h1 {
+      font-size: 3em!important;
+  }
   h3 {
       font-size: 2.2em!important;
   }
-  button, label, h5 {
+  button, label, h5, b {
     font-size: 2.0em!important;
   }
 
