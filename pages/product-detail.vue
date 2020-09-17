@@ -33,7 +33,7 @@
         </div>
         <div class="row mt-3">
           <b class="col-lg-2 col-6">Cantidad:</b>
-          <quantity class="offset-lg-2 col-6 offset-0" v-bind:quantity="quantity" />
+          <quantity class="offset-lg-2 col-6 offset-0 col-lg-4" v-bind:quantity="quantity" />
         </div>
         <div class="row mt-3">
           <b class="col-lg-2 col-6">Disponibilidad</b>
