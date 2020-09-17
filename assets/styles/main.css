@@ -74,7 +74,18 @@ img.caddy-button {
     height: 50px;
 }
 .footer-help-button {
-    height: 50px;
-    width: 50px;
+    height: 50px!important;
+    width: 50px!important;
 }
+   input  {
+    height: 60px!important;
+    font-size: 2.0em!important;
+  }
+  h3 {
+      font-size: 2.2em!important;
+  }
+  button, label, h5 {
+    font-size: 2.0em!important;
+  }
+
 }
