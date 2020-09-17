@@ -145,13 +145,5 @@ export default {
 </script>
 
 <style scoped lang="css">
-@media screen and (max-width: 992px) {
-  input {
-    height: 60px;
-    font-size: 2em;
-  }
-  button {
-    font-size: 2em;
-  }
-}
+
 </style>
