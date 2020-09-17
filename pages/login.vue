@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row justify-content-center">
-      <h3 class="col-md-4 page-info-title">Iniciar sesion</h3>
+      <h3 class="col-12 page-info-title">Iniciar sesión</h3>
     </div>
     <div class="login-box col-12 offset-xl-3 col-xl-6 offset-lg-2 col-lg-8">
       <div class="row">
@@ -17,7 +17,7 @@
       </div>
       <hr class="registry-separator" />
       <div class="row">
-        <div class="col-6 offset-3 align-center">
+        <div class="col-lg-6 col-12 offset-lg-3 align-center">
           <span>¿Eres nuevo cliente?</span>
         </div>
       </div>
@@ -38,7 +38,7 @@ export default {
   }
 }
 </script>
-<style>
+<style class="css" scoped>
 .login-box {
   border: 1px #ddd solid;
   border-radius: 4px;
@@ -55,5 +55,10 @@ export default {
 }
 .registry-separator {
   margin-bottom: 5%;
+}
+@media screen and (max-width: 991px ) {
+  span  {
+    font-size: 2.0em!important;
+  }
 }
 </style>
