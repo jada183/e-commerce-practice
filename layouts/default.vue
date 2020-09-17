@@ -45,6 +45,18 @@
               </button>
             </NuxtLink>
           </div>
+           <div class="banner-container">
+            <a href="https://www.linkedin.com/company/plexus-tech">
+             <img
+                  src="~assets/img/plexus-logo.png"
+                  width="auto"
+                  height="30px"
+                  alt="logo de la empresa patrocinadora"
+                  class="company-logo"
+                />
+                <span class="no-show-mobile banner-text">Trabaja con nosotros</span>
+            </a>
+          </div>
           <div>
             <NuxtLink to="/userInfo" v-if="login">
               <button class="btn button-userInfo header-button">
@@ -76,6 +88,7 @@
           </div>
         </div>
       </nav>
+   
       <main class="main-containter">        
           <Nuxt />
       </main>
@@ -158,6 +171,18 @@ footer .container-fluid {
 }
 main {
   flex: 1 0 auto;
+}
+.banner-text {
+  font-family: cursive;
+  color: #05055E;
+}
+.banner-container {
+  border: 1px solid darkblue;
+  border-radius: 4px;
+  padding: 5px;
+}
+.banner-container:hover{
+  background-color: lightblue;
 }
 @media screen and (max-width: 991px ) {
   .header-button {
