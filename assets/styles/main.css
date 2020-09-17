@@ -90,5 +90,10 @@ img.caddy-button {
   button, label, h5, b {
     font-size: 2.0em!important;
   }
-
+.font-size-fix {
+    font-size: 1em !important;
+  }
+  .no-show-mobile {
+      display: none;
+  }
 }
