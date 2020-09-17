@@ -43,118 +43,35 @@
   </div>
 </template>
 <script>
+import axios from "axios";
 export default {
   name: "products",
   data() {
     return {
       type: this.$route.query.type,
-      offerList: [
-        {
-          name: "portatil prueba 1",
-          price: 698,
-          image: "_nuxt/assets/img/sobremesa.png",
-          discount: null,
-          stockLimit: null,
-          timeLimitDate: null,
-          weekOffer: null,
-          id: 1
-        },
-        {
-          name: "portatil prueba 2",
-          price: 998,
-          image: "_nuxt/assets/img/laptop.png",
-          discount: null,
-          stockLimit: null,
-          timeLimitDate: null,
-          weekOffer: null,
-          id: 2
-        },
-        {
-          name: "portatil prueba 3",
-          price: 598,
-          image: "_nuxt/assets/img/sobremesa.png",
-          discount: 35,
-          stockLimit: null,
-          timeLimitDate: "2020/09/29",
-          weekOffer: false,
-          id: 3
-        },
-        {
-          name: "portatil prueba 4",
-          price: 898,
-          image: "_nuxt/assets/img/laptop.png",
-          discount: null,
-          stockLimit: null,
-          timeLimitDate: null,
-          weekOffer: null,
-          id: 4
-        },
-        {
-          name: "portatil prueba 1",
-          price: 698,
-          image: "_nuxt/assets/img/sobremesa.png",
-          discount: null,
-          stockLimit: null,
-          timeLimitDate: null,
-          weekOffer: false,
-          id: 5
-        },
-        {
-          name: "portatil prueba 2",
-          price: 998,
-          image: "_nuxt/assets/img/laptop.png",
-          discount: null,
-          stockLimit: null,
-          timeLimitDate: null,
-          weekOffer: null,
-          id: 6
-        },
-        {
-          name: "portatil prueba 3",
-          price: 598,
-          image: "_nuxt/assets/img/sobremesa.png",
-          discount: null,
-          stockLimit: null,
-          timeLimitDate: null,
-          weekOffer: null,
-          id: 7
-        },
-        {
-          name: "portatil prueba 4",
-          price: 898,
-          image: "_nuxt/assets/img/laptop.png",
-          discount: 20,
-          stockLimit: null,
-          timeLimitDate: null,
-          weekOffer: true,
-          id: 8
-        },
-        {
-          name: "portatil prueba 2",
-          price: 998,
-          image: "_nuxt/assets/img/laptop.png",
-          discount: null,
-          stockLimit: null,
-          timeLimitDate: null,
-          weekOffer: null,
-          id: 9
-        },
-        {
-          name: "portatil prueba 3",
-          price: 598,
-          image: "_nuxt/assets/img/sobremesa.png",
-          discount: null,
-          stockLimit: null,
-          timeLimitDate: null,
-          weekOffer: null,
-          id: 10
-        },
-      ]
+      offerList: []
     };
+  },
+  mounted() {
+    this.getProducts();
   },
   methods: {
     showQueryParam() {
       this.type = this.$route.query.type;
+      this.getProducts();
+    },
+    getProducts() {
+      return axios({
+        method: "GET",
+        url: "http://localhost:3001/products",
+        params: {},
+        headers: {}
+      })
+      .then(response => response.data)
+      .then(response => {
+        this.offerList = response;
+      }) 
+      ;
     }
   },
   created() {},
@@ -164,7 +81,7 @@ export default {
 };
 </script>
 <style lang="css" scoped>
-  offer-container {
-    margin-top: 5%;
-  }
+offer-container {
+  margin-top: 5%;
+}
 </style>

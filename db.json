@@ -1,0 +1,34 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Acer Aspire 3 A315-56-52KD Intel Core i5-1035G1/12GB/512GB SSD/15.6",
+            "image": "_nuxt/assets/img/acer.jpg",
+            "price": 598,
+            "discount": 20,
+            "brand": "Acer",
+            "shippingConst": 5.25,
+            "stock": true,
+            "features": "<p><ul><li>Productividad y seguridad mejoradas</li> <li>Fiabilidad extrema</li> <li>Asistencia organizativa</li></ul></p>",
+            "category": "laptop",
+            "stockLimit": null,
+            "timeLimitDate": null,
+            "weekDiscount": false
+        },
+        {
+            "id": 1,
+            "name": "Lenovo V14 ADA AMD Ryzen 3 3250U/8GB/256GB SSD/14",
+            "image": "_nuxt/assets/img/laptop.png",
+            "price": 498,
+            "discount": 20,
+            "brand": "Lenovo",
+            "shippingConst": 5.25,
+            "stock": true,
+            "features": "<p><ul><li>Productividad y seguridad mejoradas</li> <li>Fiabilidad extrema</li> <li>Asistencia organizativa</li></ul></p>",
+            "category": "laptop",
+            "stockLimit": null,
+            "timeLimitDate": null,
+            "weekOffer": false
+        }
+    ]
+}

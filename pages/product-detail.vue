@@ -93,10 +93,10 @@ export default {
     return {
       name: "HP 15S-fq1095ns Intel Core i5-1035G1/16GB/512GB",
       image: "_nuxt/assets/img/sobremesa.png",
-      price: "598",
+      price: 598,
       discount: 20,
       brand: "HP Electronics",
-      shippingConst: "5.25",
+      shippingConst: 5.25,
       quantity: 1,
       stock: true,
       favorite: false,
