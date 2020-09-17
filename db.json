@@ -3,7 +3,7 @@
         {
             "id": 1,
             "name": "Acer Aspire 3 A315-56-52KD Intel Core i5-1035G1/12GB/512GB SSD/15.6",
-            "image": "_nuxt/assets/img/acer.jpg",
+            "image": "_nuxt/assets/img/laptop.png",
             "price": 598,
             "discount": 20,
             "brand": "Acer",
