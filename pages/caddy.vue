@@ -6,14 +6,14 @@
     <div class="row">
       <div class="col-lg-9 col-12">
         <div class="table-container">
-          <div class="row table-header bg-light">
-            <span class="col-5">ARTÍCULO</span>
-            <span class="col-2">PRECIO</span>
-            <span class="col-2">UNIDADES</span>
-            <span class="col-2 last-column">TOTAL</span>
+          <div class="row table-header bg-light no-show-mobile">
+            <span class="col-lg-5 col-3">ARTÍCULO</span>
+            <span class="col-lg-2 col-3">PRECIO</span>
+            <span class="col-lg-2 col-3">UNIDADES</span>
+            <span class="col-lg-2 col-3 last-column">TOTAL</span>
           </div>
           <div class="row mb-3 content-row" v-for="item in itemList">
-            <div class="col-5 item-title-img-link">
+            <div class="col-lg-5 col-12 item-title-img-link">
               <NuxtLink
                 v-bind:to="'/product-detail?id=' + item.id"
                 class="item-title-img-container"
@@ -24,22 +24,22 @@
                   height="100%"
                   alt="Imagen del producto"
                 />
-                <div class="col-7">
-                  <span>{{ item.name }}</span>
+                <div class="col-lg-7 col-8">
+                  <span class="product-name">{{ item.name }}</span>
                 </div>
               </NuxtLink>
             </div>
 
-            <span class="col-2">{{item.price}}€</span>
-            <span class="col-2">
+            <span class="col-lg-2 col-4 no-show-mobile">{{item.price}}€</span>
+            <span class="col-lg-2 col-4 offset-4 offset-lg-0">
               <quantity v-bind:quantity="item.quantity" />
             </span>
-            <span class="col-2 last-column">{{ item.price *item.quantity}}€</span>
-            <span class="col-1 remove-item">x</span>
+            <span class="col-lg-2 col-3 last-column">{{ item.price *item.quantity}}€</span>
+            <span class="remove-item col-1">X</span>
           </div>
         </div>
         <div class="row mb-5">
-          <div class="col-lg-4 col-10 offset-1 offset-lg-0">
+          <div class="col-lg-4 col-10">
             <button class="btn btn-light">
               <img
                 src="~assets/icons/basura.svg"
@@ -47,7 +47,7 @@
                 height="25px"
                 alt="Contenedor de basura"
               />
-              <span class="pl-3">Limpiar carrito</span>
+              <span class="pl-3 font-size-fix">Limpiar carrito</span>
             </button>
           </div>
         </div>
@@ -112,6 +112,7 @@ export default {
 }
 .item-title-img-link {
   display: flex;
+  overflow: auto;
 }
 
 .last-column {
@@ -124,9 +125,17 @@ export default {
 }
 .remove-item {
   cursor: pointer;
-  
+  color: red;
 }
 .remove-item:hover {
   text-decoration: underline;
+}
+@media screen and (max-width: 992px) {
+  span {
+    font-size: 2em;
+  }
+  .product-name {
+    word-break: break-all;
+  }
 }
 </style>

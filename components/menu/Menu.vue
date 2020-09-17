@@ -1,6 +1,8 @@
 <template>
   <div class="menu-content">
-    <h5>Productos</h5>
+    <NuxtLink to="/products">
+      <h5>Productos</h5>
+    </NuxtLink>
     <ul>
       <NuxtLink to="/products?type=laptop">
         <li>Portátiles</li>
@@ -13,7 +15,9 @@
       </NuxtLink>
     </ul>
     <hr />
-    <h5>Ofertas</h5>
+    <NuxtLink to="/offers">
+      <h5>Ofertas</h5>
+    </NuxtLink>
     <ul>
       <NuxtLink to="/offers?type=week">
         <li>Chollos de la semana</li>
@@ -26,7 +30,9 @@
       </NuxtLink>
     </ul>
     <hr />
-    <h5>Mi cuenta</h5>
+    <NuxtLink to="/userInfo">
+      <h5>Mi cuenta</h5>
+    </NuxtLink>
     <ul>
       <NuxtLink to="/userInfo">
         <li>Datos de mi cuenta</li>
@@ -38,15 +44,15 @@
   </div>
 </template>
 <script>
-import { OffersQueryParams }  from "assets/const/MENU_QUERY_PARAMS"
+import { OffersQueryParams } from "assets/const/MENU_QUERY_PARAMS";
 export default {
-    name: "sidebar-menu",
-    data() {
-        return {
-            limitedStockParamValue: OffersQueryParams.limitedStockParamValue
-        }
-    },
-}
+  name: "sidebar-menu",
+  data() {
+    return {
+      limitedStockParamValue: OffersQueryParams.limitedStockParamValue
+    };
+  }
+};
 </script>
 <style lang='sass' scoped>
   @import './Menu'

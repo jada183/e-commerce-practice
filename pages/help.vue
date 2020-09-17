@@ -5,7 +5,7 @@
         </div>
         <div class="row mt-3">
             <ol class="offset-1">
-                <li>Iniciar sesión o crear cuenta.
+                <li><span class="title">Iniciar sesión o crear cuenta.</span>
                     <ul>
                         <li>Puedes acceder mediante el boton de Iniciar sesión de la cabecera en la parte superior derecha</li>
                         <li>Puedes acceder mediante el boton de Hola identificate que se encuentra en la cabecera del menu lateral que se despliega con el boton que se encuentra
@@ -16,7 +16,7 @@
                         </li>
                     </ul>
                 </li>
-                <li>Añadir productos al carrito
+                <li> <span class="title">Añadir productos al carrito</span>
                     <ul>
                         <li>Para agregar un producto al carrito hemos de pulsar la caja de cualquier producto independientemente de si se encuentra en la pagina de inicio,
                             en la ventana de ofertas o de productos, esto te redirigira a la ventana del detalle del producto.
@@ -29,7 +29,7 @@
                     </ul>
                 </li>
                 <li>
-                    Confirmar compra
+                    <span class="title">Confirmar compra</span>
                     <ul>
                         <li>Para confirmar compra debes ir a la ventana de carrito que accedes mediante el boton de carrito situado arriba a la derecha de la cabecera de la página</li>
                         <li>En la ventana de carrito dispondras de un boton de confirmar compra ademas de la opción de eliminar algun producto del carrito o de limpiar todo el carrito</li>
@@ -37,7 +37,7 @@
                     </ul>
                 </li>
                 <li>
-                    Favoritos
+                   <span class="title"> Favoritos</span>
                     <ul>
                         <li>disponemos de una opcion en el detalle del producto para añadir a favoritos , pulsando un boton con un corazon en el detalle de producto a la izquierda del boton
                             de añadir al carrito.
@@ -48,7 +48,7 @@
                         </li>
                     </ul>
                 </li>
-                <li>Gestion de tu cuenta
+                <li> <span class="title">Gestion de tu cuenta</span>
                     <ul>
                         <li>Una forma de poder cambiar los datos de tu cuenta es mediante el boton mi cuenta que se encuentra en la parte derecha de la cabecera junto
                             al boton de Mi carrito.este solo aparecera si no has iniciado sesión.
@@ -69,5 +69,13 @@
 <style scoped>
     li{
         margin-top: 2%;
+    }
+    @media screen and (max-width: 991px ) { 
+        *{
+            font-size: 1.2em;
+        }
+        .title {
+            font-size: 1.5em;
+        }
     }
 </style>

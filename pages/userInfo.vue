@@ -1,108 +1,108 @@
 <template>
   <div class="container">
     <div class="row justify-content-center">
-      <h3 class="col-md-4 page-info-title">Datos de usuario</h3>
+      <h3 class="col-12 page-info-title">Datos de usuario</h3>
     </div>
     <div class="form-container col-12  offset-lg-2 col-lg-8 ">
       <div class="row">
-        <label for="name" class="col-md-2 offset-md-1 align-items-center">Nombre:</label>
+        <label for="name" class="col-lg-2 offset-lg-1  col-12 offset-0">Nombre:</label>
         <input
           type="text"
           placeholder="nombre..."
           id="name"
-          class="col-md-5 form-control"
+          class="col-lg-5 col-8 form-control"
           v-model="name"
           v-bind:disabled="disabledName"
         />
         <button
-          class="btn btn-light offset-1 col-md-2"
+          class="btn btn-light offset-lg-1 col-lg-2 col-4"
           v-on:click="disabledName = false"
           v-if="disabledName"
-        >Editar campo</button>
+        >Editar</button>
         <button
-          class="btn btn-light offset-1 col-md-2"
+          class="btn btn-light offset-lg-1 col-lg-2 col-4"
           v-on:click="disabledName = true"
           v-if="!disabledName"
         >Guardar</button>
       </div>
       <div class="row">
-        <label for="email" class="col-md-2 offset-md-1">Email:</label>
+        <label for="email" class="col-lg-2 offset-lg-1 col-12 offset-0">Email:</label>
         <input
           type="text"
           placeholder="Email..."
           id="email"
-          class="col-md-5 form-control"
+          class="col-lg-5 col-8 form-control"
           v-model="email"
           v-bind:disabled="disabledEmail"
         />
         <button
-          class="btn btn-light offset-1 col-md-2"
+          class="btn btn-light offset-lg-1 col-lg-2 col-4"
           v-on:click="disabledEmail = false"
           v-if="disabledEmail"
-        >Editar campo</button>
+        >Editar</button>
         <button
-          class="btn btn-light offset-1 col-md-2"
+          class="btn btn-light offset-lg-1 col-lg-2 col-4"
           v-on:click="disabledEmail = true"
           v-if="!disabledEmail"
         >Guardar</button>
       </div>
       <div class="row">
-        <label for="phone" class="col-md-2 offset-md-1">Teléfono:</label>
+        <label for="phone" class="col-lg-2 offset-lg-1 col-12 offset-0">Teléfono:</label>
         <input
           type="text"
           placeholder="Teléfono..."
           id="phone"
-          class="col-md-5 form-control"
+          class="col-lg-5 col-8 form-control"
           v-model="phone"
           v-bind:disabled="disabledPhone"
         />
         <button
-          class="btn btn-light offset-1 col-md-2"
+          class="btn btn-light offset-lg-1 col-lg-2 col-4"
           v-on:click="disabledPhone = false"
           v-if="disabledPhone"
-        >Editar campo</button>
+        >Editar</button>
         <button
-          class="btn btn-light offset-1 col-md-2"
+          class="btn btn-light offset-lg-1 col-lg-2 col-4"
           v-on:click="disabledPhone = true"
           v-if="!disabledPhone"
         >Guardar</button>
       </div>
       <div class="row" v-if="!changePassword">
-        <label for="password" class="col-md-2 offset-md-1">Contraseña:</label>
+        <label for="password" class="col-lg-2 offset-lg-1 col-12 offset-0">Contraseña:</label>
         <input
           type="password"
           placeholder="contraseña...."
           id="password"
-          class="col-md-5 form-control"
+          class="col-lg-5 col-8 form-control"
           v-model="password"
           v-bind:disabled="true"
         />
         <button
-          class="btn btn-light offset-1 col-md-2"
+          class="btn btn-light offset-lg-1 col-lg-2 col-4"
           v-on:click="changePassword = true"
-        >Editar campo</button>
+        >Editar</button>
       </div>
       <div class="row" v-if="changePassword">
-        <label for="newPassword" class="col-md-2 offset-md-1">Nueva contraseña:</label>
+        <label for="newPassword" class="col-lg-2 offset-lg-1 col-12 offset-0">Nueva contraseña:</label>
         <input
           type="password"
           placeholder="contraseña...."
           id="newPassword"
-          class="col-md-5 form-control"
+          class="col-lg-5 col-8 form-control"
           v-model="newPassword"
         />
-        <button class="btn btn-light offset-1 col-md-2" v-on:click="cancelChangePassword()" tabindex="-1">Cancelar</button>
+        <button class="btn btn-light offset-lg-1 col-lg-2 col-4" v-on:click="cancelChangePassword()" tabindex="-1">Cancelar</button>
       </div>
       <div class="row" v-if="changePassword">
-        <label for="repeatedNewPassword" class="col-md-2 offset-md-1">Repita contraseña:</label>
+        <label for="repeatedNewPassword" class="col-lg-2 offset-lg-1 col-12 offset-0">Repita contraseña:</label>
         <input
           type="password"
           placeholder="contraseña...."
           id="repeatedNewPassword"
-          class="col-md-5 form-control"
+          class="col-lg-5 col-8 form-control"
           v-model="repeatedNewPassword"
         />
-        <button class="btn btn-light offset-1 col-md-2" v-on:click="changePasswordEvent()">Guardar</button>
+        <button class="btn btn-light offset-lg-1 col-lg-2 col-4" v-on:click="changePasswordEvent()">Guardar</button>
       </div>
       <div class="row" v-if="passwordError">
         <span class="error-text offset-md-1 col-md-11">- {{ passwordError }}</span>

@@ -30,6 +30,7 @@
                 width="25px"
                 height="25px"
                 alt="menu de hamburguesa"
+                class="menu-logo"
               />
             </button>
             <NuxtLink to="/">
@@ -39,13 +40,26 @@
                   width="auto"
                   height="30px"
                   alt="logo de la tienda"
+                  class="company-logo"
                 />
               </button>
             </NuxtLink>
           </div>
+           <div class="banner-container">
+            <a href="https://www.linkedin.com/company/plexus-tech">
+             <img
+                  src="~assets/img/plexus-logo.png"
+                  width="auto"
+                  height="30px"
+                  alt="logo de la empresa patrocinadora"
+                  class="company-logo"
+                />
+                <span class="no-show-mobile banner-text">Trabaja con nosotros</span>
+            </a>
+          </div>
           <div>
             <NuxtLink to="/userInfo" v-if="login">
-              <button class="btn button-userInfo">
+              <button class="btn button-userInfo header-button">
                 <div>
                   <div class="nameHeaderTitle">Hola {{ userName }}</div>
                   <div>Mi cuenta</div>
@@ -53,19 +67,20 @@
               </button>
             </NuxtLink>
             <NuxtLink to="/login" v-if="!login">
-              <button class="btn button-userInfo">
+              <button class="btn button-userInfo header-button">
                 <div>
                   <div>Iniciar sesión</div>
                 </div>
               </button>
             </NuxtLink>
             <NuxtLink to="/caddy">
-              <button class="btn">
+              <button class="btn header-button">
                 <img
                   src="~assets/icons/carro-inteligente.png"
                   width="25px"
                   height="25px"
                   alt="carrito de la compra"
+                  class="caddy-button"
                 />
                 <span>Mi carrito</span>
               </button>
@@ -73,6 +88,7 @@
           </div>
         </div>
       </nav>
+   
       <main class="main-containter">        
           <Nuxt />
       </main>
@@ -90,6 +106,7 @@
                 width="25px"
                 height="25px"
                 alt="icono de interrogante para ayuda"
+                class="footer-help-button"
               />
             </button>
           </NuxtLink>
@@ -154,5 +171,28 @@ footer .container-fluid {
 }
 main {
   flex: 1 0 auto;
+}
+.banner-text {
+  font-family: cursive;
+  color: #05055E;
+}
+.banner-container {
+  border: 1px solid darkblue;
+  border-radius: 4px;
+  padding: 5px;
+}
+.banner-container:hover{
+  background-color: lightblue;
+}
+@media screen and (max-width: 991px ) {
+  .header-button {
+    font-size: 2.0em!important;
+  }
+  footer {
+    font-size: 1.7em!important;
+  }
+  .userInfo {
+    font-size: 1.5em;
+  }
 }
 </style>
