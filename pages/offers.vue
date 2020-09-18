@@ -102,7 +102,7 @@ export default {
                 break;
               }
               default: {
-                parameters = {};
+                break;
               }
             }
 

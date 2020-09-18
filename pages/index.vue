@@ -61,68 +61,48 @@
     <div class="row mb-2">
       <div class="col-lg-3 col-6" v-for="offer in offerList">
         <NuxtLink v-bind:to="'/product-detail?id=' + offer.id">
-        <offer-container
-          v-bind:name="offer.name"
-          v-bind:image="offer.image"
-          v-bind:price="offer.price"
-          v-bind:discount="offer.discount"
-          v-bind:stockLimit="offer.stockLimit"
-          v-bind:weekOffer="offer.weekOffer"
-          v-bind:timeLimitDate="offer.timeLimitDate"
-        />
+          <offer-container
+            v-bind:name="offer.name"
+            v-bind:image="offer.image"
+            v-bind:price="offer.price"
+            v-bind:discount="offer.discount"
+            v-bind:stockLimit="offer.stockLimit"
+            v-bind:weekOffer="offer.weekOffer"
+            v-bind:timeLimitDate="offer.timeLimitDate"
+          />
         </NuxtLink>
       </div>
     </div>
   </div>
 </template>
 <script>
+import axios from "axios";
 export default {
   name: "index",
   data() {
     return {
-      offerList: [
-        {
-          name: "portatil prueba 1",
-          price: 698,
-          image: "_nuxt/assets/img/sobremesa.png",
-          discount: 30,
-          stockLimit: 75,
-          timeLimitDate: null,
-          weekOffer: false,
-          id:1
-        },
-        {
-          name: "portatil prueba 2",
-          price: 998,
-          image: "_nuxt/assets/img/laptop.png",
-          discount: 20,
-          stockLimit: null,
-          timeLimitDate: null,
-          weekOffer: true,
-          id:2
-        },
-        {
-          name: "portatil prueba 3",
-          price: 598,
-          image: "_nuxt/assets/img/sobremesa.png",
-          discount: 35,
-          stockLimit: null,
-          timeLimitDate: '2020/09/29',
-          weekOffer: false,
-          id:3
-        },
-        {
-          name: "portatil prueba 4",
-          price: 898,
-          image: "_nuxt/assets/img/laptop.png",
-          discount: 20,
-          stockLimit: null,
-          timeLimitDate: null,
-          weekOffer: true,
-          id:4
-        }
-      ]
+      offerList: []
     };
+  },
+  methods: {
+    getProducts() {
+      return axios({
+        method: "GET",
+        url: "http://localhost:3001/products",
+        params: {},
+        headers: {}
+      })
+        .then(response => response.data)
+        .then(response => response.filter(r => r.discount > 0))
+        .then(response => response.sort((a, b) => (a.discount < b.discount) ? 1 : ((b.discount < a.discount) ? -1 : 0) ).slice(0,4))
+        .then(response => {
+          this.offerList = response;
+          console.log(response);
+        });
+    }
+  },
+  mounted() {
+    this.getProducts();
   }
 };
 </script>
