@@ -12,7 +12,9 @@
             "features": "<p><ul><li>Productividad y seguridad mejoradas</li> <li>Fiabilidad extrema</li> <li>Asistencia organizativa</li></ul></p>",
             "category": "laptop",
             "stockLimit": null,
+            "stockLimitBool": false,
             "timeLimitDate": null,
+            "timeLimitDateBool": false,
             "weekDiscount": false
         },
         {
@@ -27,7 +29,9 @@
             "features": "<p><ul><li>Productividad y seguridad mejoradas</li> <li>Fiabilidad extrema</li> <li>Asistencia organizativa</li></ul></p>",
             "category": "laptop",
             "stockLimit": null,
+            "stockLimitBool": false,
             "timeLimitDate": null,
+            "timeLimitDateBool": false,
             "weekOffer": false
         },
         {
@@ -42,7 +46,9 @@
             "features": "<p><ul><li>Productividad y seguridad mejoradas</li> <li>Fiabilidad extrema</li> <li>Asistencia organizativa</li></ul></p>",
             "category": "laptop",
             "stockLimit": null,
+            "stockLimitBool": false,
             "timeLimitDate": null,
+            "timeLimitDateBool": false,
             "weekOffer": true
         },
         {
@@ -57,7 +63,9 @@
             "features": "<p><ul><li>Productividad y seguridad mejoradas</li> <li>Fiabilidad extrema</li> <li>Asistencia organizativa</li></ul></p>",
             "category": "laptop",
             "stockLimit": null,
+            "stockLimitBool": false,
             "timeLimitDate": null,
+            "timeLimitDateBool": false,
             "weekDiscount": false
         },
         {
@@ -72,7 +80,9 @@
             "features": "<p><ul><li>Productividad y seguridad mejoradas</li> <li>Fiabilidad extrema</li> <li>Asistencia organizativa</li></ul></p>",
             "category": "laptop",
             "stockLimit": null,
+            "stockLimitBool": false,
             "timeLimitDate": "2020/10/10",
+            "timeLimitDateBool": true,
             "weekOffer": false
         },
         {
@@ -87,7 +97,9 @@
             "features": "<p><ul><li>Productividad y seguridad mejoradas</li> <li>Fiabilidad extrema</li> <li>Asistencia organizativa</li></ul></p>",
             "category": "laptop",
             "stockLimit": null,
+            "stockLimitBool": false,
             "timeLimitDate": null,
+            "timeLimitDateBool": false,
             "weekOffer": false
         },
         {
@@ -102,7 +114,9 @@
             "features": "<p><ul><li>Productividad y seguridad mejoradas</li> <li>Fiabilidad extrema</li> <li>Asistencia organizativa</li></ul></p>",
             "category": "mobile",
             "stockLimit": null,
+            "stockLimitBool": false,
             "timeLimitDate": null,
+            "timeLimitDateBool": false,
             "weekOffer": false
         },
         {
@@ -117,7 +131,9 @@
             "features": "<p><ul><li>Productividad y seguridad mejoradas</li> <li>Fiabilidad extrema</li> <li>Asistencia organizativa</li></ul></p>",
             "category": "mobile",
             "stockLimit": null,
+            "stockLimitBool": false,
             "timeLimitDate": null,
+            "timeLimitDateBool": false,
             "weekOffer": false
         },
         {
@@ -132,7 +148,9 @@
             "features": "<p><ul><li>Productividad y seguridad mejoradas</li> <li>Fiabilidad extrema</li> <li>Asistencia organizativa</li></ul></p>",
             "category": "mobile",
             "stockLimit": 80,
+            "stockLimitBool": true,
             "timeLimitDate": null,
+            "timeLimitDateBool": false,
             "weekOffer": false
         },
         {
@@ -147,7 +165,9 @@
             "features": "<p><ul><li>Productividad y seguridad mejoradas</li> <li>Fiabilidad extrema</li> <li>Asistencia organizativa</li></ul></p>",
             "category": "mobile",
             "stockLimit": null,
+            "stockLimitBool": false,
             "timeLimitDate": null,
+            "timeLimitDateBool": false,
             "weekOffer": false
         },
         {
@@ -162,7 +182,9 @@
             "features": "<p><ul><li>Productividad y seguridad mejoradas</li> <li>Fiabilidad extrema</li> <li>Asistencia organizativa</li></ul></p>",
             "category": "desk",
             "stockLimit": null,
+            "stockLimitBool": false,
             "timeLimitDate": null,
+            "timeLimitDateBool": false,
             "weekOffer": false
         },
         {
@@ -177,7 +199,9 @@
             "features": "<p><ul><li>Productividad y seguridad mejoradas</li> <li>Fiabilidad extrema</li> <li>Asistencia organizativa</li></ul></p>",
             "category": "desk",
             "stockLimit": null,
+            "stockLimitBool": false,
             "timeLimitDate": null,
+            "timeLimitDateBool": false,
             "weekOffer": false
         },
         {
@@ -192,7 +216,9 @@
             "features": "<p><ul><li>Productividad y seguridad mejoradas</li> <li>Fiabilidad extrema</li> <li>Asistencia organizativa</li></ul></p>",
             "category": "desk",
             "stockLimit": null,
+            "stockLimitBool": false,
             "timeLimitDate": null,
+            "timeLimitDateBool": false,
             "weekOffer": false
         },
         {
@@ -207,7 +233,9 @@
             "features": "<p><ul><li>Productividad y seguridad mejoradas</li> <li>Fiabilidad extrema</li> <li>Asistencia organizativa</li></ul></p>",
             "category": "desk",
             "stockLimit": null,
+            "stockLimitBool": false,
             "timeLimitDate": null,
+            "timeLimitDateBool": false,
             "weekOffer": false
         }
     ]
