@@ -238,5 +238,14 @@
             "timeLimitDateBool": false,
             "weekOffer": false
         }
+    ],
+    "users": [
+        {
+            "username": "usuario1",
+            "password": "123456",
+            "name": "Juan Garcia Perez",
+            "email": "jada183.jf@gmail.com",
+            "telephone":"603739149"
+        }
     ]
 }
