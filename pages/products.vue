@@ -4,7 +4,10 @@
       <h3 class="col-md-4 page-info-title">Productos</h3>
     </div>
     <div class="row mb-5">
-      <div class="offset-xl-2 col-xl-8 col-8 offset-1">
+      <select name="optionsFilter" class="col-2 offset-1 offset-lg-1" v-model="filterCategory">
+        <option v-for="option in optionsList" v-bind:value="option">{{option}}</option>
+      </select>
+      <div class="col-lg-7 col-7">
         <!-- <div class="dropdown">
           <button
             class="btn btn-secondary dropdown-toggle"
@@ -20,9 +23,9 @@
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
         </div>-->
-        <input type="text" class="form-control" placeholder />
+        <input type="text" class="form-control" placeholder v-model="searchValue" />
       </div>
-      <button class="btn btn-light">Buscar</button>
+      <button class="btn btn-light" v-on:click="getProducts()">Buscar</button>
     </div>
     <div class="row mb-2">
       <div class="col-lg-3 col-6" v-for="offer in offerList">
@@ -43,118 +46,102 @@
   </div>
 </template>
 <script>
+import axios from "axios";
 export default {
   name: "products",
   data() {
     return {
       type: this.$route.query.type,
-      offerList: [
-        {
-          name: "portatil prueba 1",
-          price: 698,
-          image: "_nuxt/assets/img/sobremesa.png",
-          discount: null,
-          stockLimit: null,
-          timeLimitDate: null,
-          weekOffer: null,
-          id: 1
-        },
-        {
-          name: "portatil prueba 2",
-          price: 998,
-          image: "_nuxt/assets/img/laptop.png",
-          discount: null,
-          stockLimit: null,
-          timeLimitDate: null,
-          weekOffer: null,
-          id: 2
-        },
-        {
-          name: "portatil prueba 3",
-          price: 598,
-          image: "_nuxt/assets/img/sobremesa.png",
-          discount: 35,
-          stockLimit: null,
-          timeLimitDate: "2020/09/29",
-          weekOffer: false,
-          id: 3
-        },
-        {
-          name: "portatil prueba 4",
-          price: 898,
-          image: "_nuxt/assets/img/laptop.png",
-          discount: null,
-          stockLimit: null,
-          timeLimitDate: null,
-          weekOffer: null,
-          id: 4
-        },
-        {
-          name: "portatil prueba 1",
-          price: 698,
-          image: "_nuxt/assets/img/sobremesa.png",
-          discount: null,
-          stockLimit: null,
-          timeLimitDate: null,
-          weekOffer: false,
-          id: 5
-        },
-        {
-          name: "portatil prueba 2",
-          price: 998,
-          image: "_nuxt/assets/img/laptop.png",
-          discount: null,
-          stockLimit: null,
-          timeLimitDate: null,
-          weekOffer: null,
-          id: 6
-        },
-        {
-          name: "portatil prueba 3",
-          price: 598,
-          image: "_nuxt/assets/img/sobremesa.png",
-          discount: null,
-          stockLimit: null,
-          timeLimitDate: null,
-          weekOffer: null,
-          id: 7
-        },
-        {
-          name: "portatil prueba 4",
-          price: 898,
-          image: "_nuxt/assets/img/laptop.png",
-          discount: 20,
-          stockLimit: null,
-          timeLimitDate: null,
-          weekOffer: true,
-          id: 8
-        },
-        {
-          name: "portatil prueba 2",
-          price: 998,
-          image: "_nuxt/assets/img/laptop.png",
-          discount: null,
-          stockLimit: null,
-          timeLimitDate: null,
-          weekOffer: null,
-          id: 9
-        },
-        {
-          name: "portatil prueba 3",
-          price: 598,
-          image: "_nuxt/assets/img/sobremesa.png",
-          discount: null,
-          stockLimit: null,
-          timeLimitDate: null,
-          weekOffer: null,
-          id: 10
-        },
-      ]
+      offerList: [],
+      searchValue: "",
+      filterCategory: "nombre",
+      optionsList: ["nombre", "categoria", "marca"]
     };
+  },
+  mounted() {
+    this.searchValuePreload();
+    this.type
+      ? (this.filterCategory = "categoria")
+      : (this.filterCategory = "nombre");
+    this.getProducts();
   },
   methods: {
     showQueryParam() {
       this.type = this.$route.query.type;
+      this.type
+        ? (this.filterCategory = "categoria")
+        : (this.filterCategory = "nombre");
+      this.searchValuePreload();
+      this.getProducts();
+    },
+    getProducts() {
+      let parameters = {};
+      if (this.searchValue) {
+        switch (this.filterCategory) {
+          case "nombre": {
+            parameters = { name: this.searchValue };
+            break;
+          }
+          case "categoria": {
+            switch (this.searchValue) {
+              case "portatiles": {
+                parameters = { category: "laptop" };
+                break;
+              }
+              case "sobremesa": {
+                parameters = { category: "desk" };
+                break;
+              }
+              case "moviles": {
+                parameters = { category: "mobile" };
+                break;
+              }
+              default: {
+                parameters = {};
+              }
+            }
+
+            break;
+          }
+          case "marca": {
+            parameters = { brand: this.searchValue };
+            break;
+          }
+          default: {
+            break;
+          }
+        }
+      }
+      return axios({
+        method: "GET",
+        url: "http://localhost:3001/products",
+        params: parameters,
+        headers: {}
+      })
+        .then(response => response.data)
+        .then(response => {
+          this.offerList = response;
+        });
+    },
+    searchValuePreload() {
+      switch (this.type) {
+        case "laptop": {
+          this.searchValue = "portatiles";
+          break;
+        }
+        case "desk": {
+          this.searchValue = "sobremesa";
+          break;
+        }
+        case "mobile": {
+          this.searchValue = "moviles";
+          break;
+        }
+        default: {
+          this.searchValue = "";
+          break;
+        }
+      }
     }
   },
   created() {},
@@ -164,7 +151,7 @@ export default {
 };
 </script>
 <style lang="css" scoped>
-  offer-container {
-    margin-top: 5%;
-  }
+offer-container {
+  margin-top: 5%;
+}
 </style>
