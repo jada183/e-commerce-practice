@@ -3,7 +3,7 @@
         {
             "id": 1,
             "name": "Acer Aspire 3 A315-56-52KD Intel Core i5-1035G1/12GB/512GB SSD/15.6",
-            "image": "_nuxt/static/img/laptop2.png",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/81o8Tll-5-L._AC_SX679_.jpg",
             "price": 598,
             "discount": null,
             "brand": "Acer",
@@ -20,7 +20,7 @@
         {
             "id": 2,
             "name": "Lenovo V14 ADA AMD Ryzen 3 3250U/8GB/256GB SSD/14",
-            "image": "_nuxt/static/img/laptop3.png",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/71%2BxzXp0JLL._AC_SL1500_.jpg",
             "price": 498,
             "discount": 20,
             "brand": "Lenovo",
@@ -37,7 +37,7 @@
         {
             "id": 3,
             "name": "MSI Modern 14 A10RAS-1049XES Intel Core I7-10510U/32GB/1TB SSD/MX330/14",
-            "image": "_nuxt/static/img/laptop4.png",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/81OHavu8e9L._AC_SL1500_.jpg",
             "price": 898,
             "discount": 20,
             "brand": "MSI",
@@ -54,7 +54,7 @@
         {
             "id": 4,
             "name": "Acer Aspire 4 A315-56-52KD Intel Core i5-1035G1/12GB/512GB SSD/15.6",
-            "image": "_nuxt/static/img/laptop2.png",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/81o8Tll-5-L._AC_SX679_.jpg",
             "price": 698,
             "discount": null,
             "brand": "Acer",
@@ -71,7 +71,7 @@
         {
             "id": 5,
             "name": "Lenovo V15 ADA AMD Ryzen 3 3250U/8GB/256GB SSD/14",
-            "image": "_nuxt/static/img/laptop3.png",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/71%2BxzXp0JLL._AC_SL1500_.jpg",
             "price": 598,
             "discount": 10,
             "brand": "Lenovo",
@@ -88,7 +88,7 @@
         {
             "id": 6,
             "name": "MSI Modern 15 A10RAS-1049XES Intel Core I7-10510U/32GB/1TB SSD/MX330/14",
-            "image": "_nuxt/static/img/laptop4.png",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/81OHavu8e9L._AC_SL1500_.jpg",
             "price": 998,
             "discount": null,
             "brand": "MSI",
@@ -105,7 +105,7 @@
         {
             "id": 7,
             "name": "Apple iPhone 11 128GB Blanco Libre",
-            "image": "_nuxt/static/img/mobile1.png",
+            "image": "https://static.carrefour.es/hd_510x_/crs/cdn_static/catalog/hd/041960_00_1.jpg",
             "price": 850,
             "discount": null,
             "brand": "Apple",
@@ -122,7 +122,7 @@
         {
             "id": 8,
             "name": "Samsung Galaxy S8",
-            "image": "_nuxt/static/img/mobile2.png",
+            "image": "https://img.pccomponentes.com/articles/26/261928/samsung-galaxy-s20-8-128-gb-cloud-blue-libre.jpg",
             "price": 698,
             "discount": null,
             "brand": "Samsung",
@@ -139,7 +139,7 @@
         {
             "id": 9,
             "name": "Samsung Galaxy S7",
-            "image": "_nuxt/static/img/mobile3.png",
+            "image": "https://img.pccomponentes.com/articles/26/261928/samsung-galaxy-s20-8-128-gb-cloud-blue-libre.jpg",
             "price": 498,
             "discount": 30,
             "brand": "Samsung",
@@ -156,7 +156,7 @@
         {
             "id": 10,
             "name": "Samsung Galaxy S9",
-            "image": "_nuxt/static/img/mobile3.png",
+            "image": "https://img.pccomponentes.com/articles/26/261928/samsung-galaxy-s20-8-128-gb-cloud-blue-libre.jpg",
             "price": 998,
             "discount": null,
             "brand": "Samsung",
@@ -173,7 +173,7 @@
         {
             "id": 11,
             "name": "LUMAR Ordenador Sobremesa/Intel Core i7 Up to 4×3,9Ghz / 16GB RAM / 480GB SSD + 3TB",
-            "image": "_nuxt/static/img/desk1.png",
+            "image": "https://informaticalumar.com/wp-content/uploads/2019/11/caja-gaming-rgb-deepabyss-frontal-600x600.jpg",
             "price": 629,
             "discount": null,
             "brand": "Nox",
@@ -190,7 +190,7 @@
         {
             "id": 12,
             "name": "ordenador Pc Gaming de Sobremesa Torre Devil Roja ",
-            "image": "_nuxt/static/img/desk2.png",
+            "image": "https://www.worten.es/i/9ebc100429dc36d55bdd7b55785a820fa836ed7c.jpg",
             "price": 729,
             "discount": 35,
             "brand": "Red devil",
@@ -207,7 +207,7 @@
         {
             "id": 13,
             "name": "LUMAR Ordenador Sobremesa/Intel Core i5 Up to 4×3,9Ghz / 16GB RAM / 480GB SSD + 3TB",
-            "image": "_nuxt/static/img/desk1.png",
+            "image": "https://informaticalumar.com/wp-content/uploads/2019/11/caja-gaming-rgb-deepabyss-frontal-600x600.jpg",
             "price": 529,
             "discount": 20,
             "brand": "r",
@@ -224,7 +224,7 @@
         {
             "id": 14,
             "name": "ordenador Pc Gaming de Sobremesa Torre Devil Roja ",
-            "image": "_nuxt/static/img/desk2.png",
+            "image": "https://www.worten.es/i/9ebc100429dc36d55bdd7b55785a820fa836ed7c.jpg",
             "price": 729,
             "discount": null,
             "brand": "Red devil",
@@ -245,7 +245,7 @@
             "password": "123456",
             "name": "Juan Garcia Perez",
             "email": "jada183.jf@gmail.com",
-            "telephone":"603739149"
+            "telephone": "603739149"
         }
     ]
 }
